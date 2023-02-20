@@ -1,2 +1,5 @@
 # TheNewsApp
-A fully functional To Do app i created with flutter during my learning journey.
+
+A fully functional news app i created with flutter during my learning journey.
+
+Things i learned while working on this project:
