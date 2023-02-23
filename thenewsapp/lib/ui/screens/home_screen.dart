@@ -9,21 +9,26 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (BuildContext contex) => NewCubit(),
-      child: BlocConsumer<NewCubit, NewStates>(
+      create: (BuildContext contex) => NewsCubit()..getBusiness(),
+      child: BlocConsumer<NewsCubit, NewsStates>(
         listener: (context, state) {},
         builder: (context, state) {
-          NewCubit cubit = NewCubit.get(context);
+          NewsCubit cubit = NewsCubit.get(context);
           return Scaffold(
             appBar: AppBar(
-              title: const Text("NewsApp"),
+              title: const Text("TheNewsApp"),
               actions: [
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.search,
-                    color: Colors.black,
-                    size: 35,
+                SizedBox(
+                  height: 50,
+                  width: 55,
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(30),
+                    onTap: () {},
+                    child: const Icon(
+                      Icons.search,
+                      color: Colors.black,
+                      size: 35,
+                    ),
                   ),
                 ),
                 const SizedBox(width: 10)
@@ -34,6 +39,7 @@ class HomeScreen extends StatelessWidget {
               items: cubit.bottomItems,
               currentIndex: cubit.currentIndex,
               onTap: (index) {
+                if (index == 1) {}
                 cubit.changeBottomBarIndex(index);
               },
             ),

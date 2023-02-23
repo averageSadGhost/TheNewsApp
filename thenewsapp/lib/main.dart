@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:thenewsapp/helpers/dio_helpers.dart';
 
 import 'ui/screens/home_screen.dart';
 
 void main() {
+  DioHelper.init();
   runApp(const MyApp());
 }
 
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'News App',
+      title: 'TheNewsApp',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
