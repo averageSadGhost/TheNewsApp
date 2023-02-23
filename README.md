@@ -7,7 +7,7 @@ Things i learned while working on this project:
   - Clean file architecture.
   - Bloc state management.
   - Ui responsiveness.
-  - Get storage.
+  - Get storage(shared preferences).
   - Theme management with Get.
   - API requests with dio package.
   - Web view
