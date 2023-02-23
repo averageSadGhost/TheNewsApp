@@ -2,18 +2,16 @@ import 'package:flutter/material.dart';
 
 class Themes {
   static final lightTheme = ThemeData(
-    primaryColor: Colors.white,
+    primaryColor: Colors.black,
     // ignore: deprecated_member_use
-    backgroundColor: Colors.white,
+    backgroundColor: Colors.grey[100],
     brightness: Brightness.light,
-    primaryColorDark: Colors.black,
   );
 
   static final darkTheme = ThemeData(
-    primaryColor: Colors.black,
+    primaryColor: Colors.white,
     // ignore: deprecated_member_use
     backgroundColor: Colors.grey[900],
     brightness: Brightness.dark,
-    primaryColorDark: Colors.white,
   );
 }

@@ -18,6 +18,7 @@ class BusinessScreen extends StatelessWidget {
         return ConditionalBuilder(
             condition: state is! NewsGetBusinessLoadingState,
             builder: (contex) => ListView.separated(
+                  physics: const BouncingScrollPhysics(),
                   itemBuilder: (context, index) {
                     return buildArticleItem(list[index], contex);
                   },

@@ -19,6 +19,7 @@ class ScienceScreen extends StatelessWidget {
         return ConditionalBuilder(
           condition: state is! NewsGetScineceLoadingState,
           builder: (contex) => ListView.separated(
+            physics: const BouncingScrollPhysics(),
             itemBuilder: (context, index) {
               return buildArticleItem(list[index], contex);
             },
