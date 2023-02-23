@@ -73,7 +73,6 @@ class _HomeScreenState extends State<HomeScreen> {
             items: cubit.bottomItems,
             currentIndex: cubit.currentIndex,
             onTap: (index) {
-              if (index == 1) {}
               cubit.changeBottomBarIndex(index);
             },
           ),
