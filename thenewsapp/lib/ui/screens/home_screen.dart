@@ -6,6 +6,8 @@ import 'package:get/get.dart';
 import 'package:thenewsapp/services/theme_services.dart';
 import 'package:thenewsapp/ui/screens/search_screen.dart';
 
+import '../size_config.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -16,6 +18,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return BlocConsumer<NewsCubit, NewsStates>(
       listener: (context, state) {},
       builder: (context, state) {

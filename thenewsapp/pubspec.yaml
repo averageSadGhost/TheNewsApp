@@ -41,6 +41,7 @@ dependencies:
   conditional_builder_null_safety: ^0.0.6
   get: ^4.6.5
   get_storage: ^2.0.3
+  webview_flutter: ^4.0.5
 
 dev_dependencies:
   flutter_test:
