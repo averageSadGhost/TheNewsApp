@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../cubit/cubit.dart';
 import '../../cubit/states.dart';
-import '../components/article_item.dart';
+import '../widgets/article_item.dart';
 
 class ScienceScreen extends StatelessWidget {
   const ScienceScreen({Key? key}) : super(key: key);
@@ -20,7 +20,7 @@ class ScienceScreen extends StatelessWidget {
           condition: state is! NewsGetScineceLoadingState,
           builder: (contex) => ListView.separated(
             itemBuilder: (context, index) {
-              return buildArticleItem(list[index]);
+              return buildArticleItem(list[index], contex);
             },
             separatorBuilder: (context, index) {
               return const Padding(

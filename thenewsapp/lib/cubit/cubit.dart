@@ -54,7 +54,7 @@ class NewsCubit extends Cubit<NewsStates> {
       query: {
         "country": "eg",
         "category": "business",
-        "apiKey": "65f7f556ec76449fa7dc7c0069f040ca",
+        "apiKey": "84f85c09fc45402ea9fed35d8d8dcc81",
       },
     ).then((value) {
       business = value.data["articles"];
@@ -75,7 +75,7 @@ class NewsCubit extends Cubit<NewsStates> {
         query: {
           "country": "eg",
           "category": "sports",
-          "apiKey": "65f7f556ec76449fa7dc7c0069f040ca",
+          "apiKey": "84f85c09fc45402ea9fed35d8d8dcc81",
         },
       ).then((value) {
         sports = value.data["articles"];
@@ -100,17 +100,15 @@ class NewsCubit extends Cubit<NewsStates> {
         query: {
           "country": "eg",
           "category": "science",
-          "apiKey": "65f7f556ec76449fa7dc7c0069f040ca",
+          "apiKey": "84f85c09fc45402ea9fed35d8d8dcc81",
         },
       ).then((value) {
         science = value.data["articles"];
         emit(NewsGetScineceSuccessState());
       }).catchError((error) {
-        debugPrint("Error getting data $error");
         emit(NewsGetScienceErrorState(error));
       });
     } else {
-      debugPrint("data already loaded");
       emit(NewsGetScineceSuccessState());
     }
   }

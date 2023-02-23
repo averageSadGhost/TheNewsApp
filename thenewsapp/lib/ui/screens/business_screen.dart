@@ -3,7 +3,7 @@ import 'package:conditional_builder_null_safety/conditional_builder_null_safety.
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:thenewsapp/cubit/cubit.dart';
 import 'package:thenewsapp/cubit/states.dart';
-import 'package:thenewsapp/ui/components/article_item.dart';
+import 'package:thenewsapp/ui/widgets/article_item.dart';
 
 class BusinessScreen extends StatelessWidget {
   const BusinessScreen({Key? key}) : super(key: key);
@@ -19,7 +19,7 @@ class BusinessScreen extends StatelessWidget {
             condition: state is! NewsGetBusinessLoadingState,
             builder: (contex) => ListView.separated(
                   itemBuilder: (context, index) {
-                    return buildArticleItem(list[index]);
+                    return buildArticleItem(list[index], contex);
                   },
                   separatorBuilder: (context, index) {
                     return const Padding(

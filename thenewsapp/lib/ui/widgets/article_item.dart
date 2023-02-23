@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:thenewsapp/ui/size_config.dart';
 
-Widget buildArticleItem(article) {
-  // ignore: unnecessary_null_comparison
+Widget buildArticleItem(article, context) {
+  SizeConfig().init(context);
   String imgUrl = article["urlToImage"] == null
       ? "https://cdn5-ss12.sharpschool.com/UserFiles/Servers/Server_1023780/Image/News.jpg"
       : "${article["urlToImage"]}";
@@ -11,8 +12,12 @@ Widget buildArticleItem(article) {
     child: Row(
       children: [
         Container(
-          width: 120,
-          height: 120,
+          width: SizeConfig.orientation == Orientation.portrait
+              ? SizeConfig.screenWidth * 0.240
+              : SizeConfig.screenWidth * 0.320,
+          height: SizeConfig.orientation == Orientation.portrait
+              ? SizeConfig.screenHeight * 0.160
+              : SizeConfig.screenHeight * 0.320,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             image: DecorationImage(

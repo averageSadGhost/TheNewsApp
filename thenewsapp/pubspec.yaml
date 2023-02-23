@@ -39,6 +39,9 @@ dependencies:
   flutter_bloc: ^8.1.2
   dio: ^5.0.0
   conditional_builder_null_safety: ^0.0.6
+  get: ^4.6.5
+  get_storage: ^2.0.3
+  google_fonts: ^4.0.3
 
 dev_dependencies:
   flutter_test:
